@@ -1,0 +1,254 @@
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Inter", serif;
+    background-color: #000000;
+    color: white;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+/* _______________________________________________header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    background-color: #101010;
+    box-shadow: 0 4px 25px rgba(132, 1, 255, 0.612);
+    position: relative; 
+    z-index: 10;
+}
+/* styling for hamburger thats only in mobile  */
+.mobile-menu-icon {
+    cursor: pointer;
+    display: block;
+}
+/* VcobaX logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5C5C5C;
+    margin-right: auto; 
+}
+.logo h1{
+    padding-left: 15px;
+    color: #ffffff;
+}
+/* navigation in header */
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    width: auto; 
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: normal; 
+}
+/* make the nav items purple when hover */
+nav a:hover {
+    color: #8401FF; 
+    font-weight: 400; 
+}
+nav.active {
+    display: flex;
+}
+/* _______________________________________________dictionary */
+#dictionary_sec
+{
+    width: 100%;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+#input-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#input-sec h1 {
+    padding-bottom: 2rem;
+}
+/* styling for input field  */
+input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    background-color: #3c364c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+/* give shadow while typing */
+input:focus {
+    box-shadow: 0 0 15px rgba(132, 1, 255, 0.9);
+}
+/* css for the defination output */
+#definition {
+    width: 80%;
+    text-align: center;
+    margin: 40px auto 0 auto;
+
+    padding-left: 20px;
+    margin-top: 40px;
+    font-size: 18px;
+    color:white;
+}
+#searchButton {
+    color: white;
+    background-color: #8401FF;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#input-sec div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* _______________________________________________footer */
+footer {
+    background-color: #101010;
+    color: white;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+.footer-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+/* styling for logo in footer */
+.footer-logo h2 {
+    color: #8401FF;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.footer-links ul {
+    list-style: none;
+    padding-top: 10px;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+.footer-links a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+.footer-links a:hover {
+    color: #8401FF;
+}
+.footer-social .social-icons {
+    padding-top: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+/* for animation in footer social icons */
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+/* on hover svale up */
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+.footer-social p{
+    font-size: 12px;
+}
+/* copyright  */
+.footer-copy {
+    font-size: 10px;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+/* __________________________for web version__________________________________ */
+
+
+@media (min-width: 650px) {
+
+    header {
+        justify-content: space-between;
+    }
+    .logo {
+        margin-right: 0;
+    }
+    .logo h1 {
+        font-size: 38px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 6rem;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    nav ul li:not(:last-child)::after {
+        position: static;
+        margin-left: 0.5rem;
+    }
+
+    .mobile-menu-icon {
+        display: none;
+    }
+
+    #input-sec div {
+        flex-direction: row;
+    }
+
+    footer {
+        margin-top: 10rem;
+    }
+
+    .footer-sec{
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+}
